@@ -4,62 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddUsers">
+    tools:context=".UpdateDeleteUsers">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <EditText
-            android:id="@+id/editTextPk"
-            android:visibility="gone"
+            android:id="@+id/tvId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter The User ID"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Enter The User Name"
             android:inputType="textPersonName" />
-<EditText
-            android:id="@+id/editTextName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-        android:hint="Enter The User Name"
-            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextLocation"
+            android:id="@+id/tvLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Enter The User Location"
-            android:inputType="textPersonName"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:inputType="textPersonName" />
+
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <Button
-            android:id="@+id/addusserBtn"
-            android:layout_width="match_parent"
+            android:id="@+id/deletebtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:backgroundTint="@color/darkpink"
-            android:text="Save" />
+            android:text="Delete" />
 
         <Button
-            android:id="@+id/viewBtn"
-            android:layout_width="match_parent"
+            android:id="@+id/updateBtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:backgroundTint="@color/darkpink"
-            android:text="View" />
+            android:text="Update" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/changesbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Changes"
+        android:backgroundTint="@color/darkpink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
